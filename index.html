@@ -18,7 +18,9 @@
     rel="stylesheet">
 
   <style>
-
+html{
+  scroll-behavior:smooth;
+}
     *{
       margin:0;
       padding:0;
@@ -34,7 +36,31 @@
       color:white;
       overflow-x:hidden;
     }
+body::before{
+  content:'';
+  position:fixed;
+  width:320px;
+  height:320px;
+  background:#8b5cf6;
+  filter:blur(120px);
+  top:-120px;
+  left:-120px;
+  opacity:0.35;
+  z-index:-1;
+}
 
+body::after{
+  content:'';
+  position:fixed;
+  width:320px;
+  height:320px;
+  background:#3b82f6;
+  filter:blur(120px);
+  bottom:-120px;
+  right:-120px;
+  opacity:0.30;
+  z-index:-1;
+}
     @keyframes bgMove{
       0%{background-position:0% 50%}
       50%{background-position:100% 50%}
@@ -378,10 +404,9 @@
 
       <h1>KARAN</h1>
 
-      <p class="tagline">
-        BCA Student | Digital Creator | Computer Enthusiast
-      </p>
-
+     <p class="tagline">
+  <span id="typing"></span>
+</p>
     </section>
 
     <!-- Social Media -->
@@ -527,7 +552,24 @@
       },1000);
 
     }
+const text = "BCA Student | Digital Creator | AI Enthusiast";
+let i = 0;
 
+function typingEffect(){
+
+  if(i < text.length){
+
+    document.getElementById("typing").innerHTML += text.charAt(i);
+
+    i++;
+
+    setTimeout(typingEffect,70);
+
+  }
+
+}
+
+typingEffect();
   </script>
 
 </body>
