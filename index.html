@@ -10,6 +10,7 @@
 
   <link rel="icon" type="image/jpeg" href="karan.jpeg">
 
+  <!-- Google Font -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
@@ -47,6 +48,8 @@
       padding:30px 20px;
     }
 
+    /* Hero Section */
+
     .hero{
       text-align:center;
       padding:40px 20px;
@@ -73,17 +76,21 @@
       opacity:0.9;
     }
 
+    /* Section */
+
     .social-section,
     .gallery-section{
-      margin-top:60px;
+      margin-top:70px;
     }
 
     .section-title{
       text-align:center;
       font-size:2rem;
-      margin-bottom:30px;
+      margin-bottom:35px;
       font-weight:600;
     }
+
+    /* Social Buttons */
 
     .social-buttons{
       display:flex;
@@ -110,10 +117,16 @@
       box-shadow:0 0 20px rgba(255,255,255,0.3);
     }
 
+    /* Gallery */
+
     .gallery{
       display:grid;
       grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-      gap:20px;
+      gap:25px;
+    }
+
+    .gallery-box{
+      text-align:center;
     }
 
     .gallery img{
@@ -130,6 +143,61 @@
       transform:scale(1.04);
     }
 
+    .gallery-box h3{
+      margin-top:15px;
+    }
+
+    /* Resume Card */
+
+    .resume-link{
+      text-decoration:none;
+      color:white;
+    }
+
+    .resume-card{
+      width:340px;
+      margin:auto;
+      padding:22px;
+      border-radius:28px;
+      background:rgba(255,255,255,0.10);
+      backdrop-filter:blur(15px);
+      border:1px solid rgba(255,255,255,0.2);
+      box-shadow:0 0 35px rgba(255,255,255,0.15);
+      transition:0.4s ease;
+      text-align:center;
+    }
+
+    .resume-card:hover{
+      transform:translateY(-8px) scale(1.02);
+      box-shadow:0 0 40px rgba(255,255,255,0.25);
+    }
+
+    .resume-preview{
+      width:140px;
+      height:180px;
+      object-fit:cover;
+      border-radius:12px;
+      margin-bottom:15px;
+      border:2px solid rgba(255,255,255,0.15);
+      box-shadow:0 0 15px rgba(255,255,255,0.15);
+    }
+
+    .folder-icon{
+      font-size:4rem;
+      margin-bottom:10px;
+    }
+
+    .resume-card h2{
+      font-size:1.8rem;
+      margin-bottom:10px;
+    }
+
+    .resume-card p{
+      opacity:0.8;
+    }
+
+    /* Footer */
+
     .footer{
       text-align:center;
       margin-top:70px;
@@ -137,7 +205,7 @@
       opacity:0.8;
     }
 
-    /* WELCOME SCREEN */
+    /* Welcome Screen */
 
     #welcome-screen{
       position:fixed;
@@ -240,6 +308,8 @@
       }
     }
 
+    /* Mobile Responsive */
+
     @media(max-width:768px){
 
       h1{
@@ -264,6 +334,10 @@
         font-size:2rem;
       }
 
+      .resume-card{
+        width:100%;
+      }
+
     }
 
   </style>
@@ -272,7 +346,7 @@
 
 <body>
 
-  <!-- WELCOME SCREEN -->
+  <!-- Welcome Screen -->
 
   <div id="welcome-screen">
 
@@ -296,7 +370,7 @@
 
   <div class="container">
 
-    <!-- HERO SECTION -->
+    <!-- Hero -->
 
     <section class="hero">
 
@@ -310,7 +384,7 @@
 
     </section>
 
-    <!-- SOCIAL MEDIA -->
+    <!-- Social Media -->
 
     <section class="social-section">
 
@@ -348,43 +422,41 @@
 
     </section>
 
-  
-
-    <!-- WORK SECTION -->
+    <!-- Proof Section -->
 
     <section class="gallery-section">
 
       <h2 class="section-title">
-      <B> My Proof <B/>
+        My Proof
       </h2>
 
       <div class="gallery">
 
-        <div>
+        <div class="gallery-box">
 
-          <img src="Myad.jpeg" alt="Work 1">
+          <img src="Myad.jpeg" alt="Google Adsense">
 
-          <h3 style="text-align:center; margin-top:12px;">
-            I have Google Adsense
+          <h3>
+            Google Adsense
           </h3>
 
         </div>
 
-        <div>
+        <div class="gallery-box">
 
-          <img src="proof2.jpeg" alt="Work 2">
+          <img src="proof2.jpeg" alt="App Designing">
 
-          <h3 style="text-align:center; margin-top:12px;">
+          <h3>
             App Designing with AI
           </h3>
 
         </div>
 
-        <div>
+        <div class="gallery-box">
 
-          <img src="Proof1.jpeg" alt="Work 3">
+          <img src="Proof1.jpeg" alt="Testing">
 
-          <h3 style="text-align:center; margin-top:12px;">
+          <h3>
             Testing
           </h3>
 
@@ -393,7 +465,8 @@
       </div>
 
     </section>
-  <!-- RESUME PREVIEW -->
+
+    <!-- Resume Section -->
 
     <section class="social-section">
 
@@ -401,82 +474,35 @@
         Download Digital Copy
       </h2>
 
-      <div style="text-align:center;">
+      <a href="https://1drv.ms/i/c/dc15fffda2f9a7a9/IQCWGE7LhDcHQ4ulRYBGjNUtAXqWpCnlHL9rj8s9no2mrrQ?e=XOvAzs"
+         target="_blank"
+         class="resume-link">
 
-        <div style="text-align:center;">
+        <div class="resume-card">
 
-  <a href="https://1drv.ms/i/c/dc15fffda2f9a7a9/IQCWGE7LhDcHQ4ulRYBGjNUtAXqWpCnlHL9rj8s9no2mrrQ?e=XOvAzs"
-     target="_blank"
-     style="
-     text-decoration:none;
-     color:white;
-     ">
+          <img src="karanCv.jpg"
+               alt="Resume Preview"
+               class="resume-preview">
 
-    <!-- RESUME CARD -->
+          <div class="folder-icon">
+            📁
+          </div>
 
-    <div style="
-    width:340px;
-    margin:auto;
-    padding:20px;
-    border-radius:28px;
-    background:rgba(255,255,255,0.10);
-    backdrop-filter:blur(15px);
-    border:1px solid rgba(255,255,255,0.2);
-    box-shadow:0 0 35px rgba(255,255,255,0.15);
-    transition:0.4s ease;
-    ">
+          <h2>
+            My Resume
+          </h2>
 
-      <!-- SMALL RESUME PREVIEW -->
+          <p>
+            Click To Open & Download
+          </p>
 
-   <img src="karanCv.jpg"
-alt="Resume Preview"
+        </div>
 
-style="
-width:140px;
-height:180px;
-object-fit:cover;
-border-radius:12px;
-margin-bottom:15px;
-border:2px solid rgba(255,255,255,0.15);
-box-shadow:0 0 15px rgba(255,255,255,0.15);
-">
-
-      <!-- FOLDER ICON -->
-
-      <div style="
-      font-size:4rem;
-      margin-bottom:10px;
-      ">
-        📁
-      </div>
-
-      <!-- TITLE -->
-
-      <h2 style="
-      margin-bottom:10px;
-      font-size:1.8rem;
-      ">
-        My Resume
-      </h2>
-
-      <!-- SUBTEXT -->
-
-      <p style="
-      opacity:0.8;
-      ">
-        Click To Open & Download
-      </p>
-
-    </div>
-
-  </a>
-
-</div>
-
-      </div>
+      </a>
 
     </section>
-    <!-- FOOTER -->
+
+    <!-- Footer -->
 
     <div class="footer">
       © 2026 KARAN • All Rights Reserved
